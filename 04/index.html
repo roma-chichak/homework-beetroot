@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form{
+            max-width: 430px;
+        }
+        .form-raw{
+            margin-bottom: 10px;
+        }
+        .form-raw label{
+            display: inline-block;
+            width: 200px;
+        }
+        .form-raw input{
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+        <div class="form-raw">
+            <label for="username">Повне ім`я</label>
+            <input type="text" name="username" id="username" required>
+        </div>
+        <div class="form-raw">
+            <label for="email" lang="en">Email</label>
+            <input type="email" pattern="+@example\.com" name="email" id="email" required>
+        </div>
+        <div class="form-raw">
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div class="form-raw">
+            <label for="repeat-password">Пароль ще раз</label>
+            <input type="password" id="repeat-password" required>
+        </div>
+        <div class="form-raw" >
+            <label>Стать</label>
+            <label style="width: 90px;">
+                <input type="radio" name="gender" value="male" checked style="width: 13px;"> чоловіча
+            </label>
+            <label style="width: 90px;">
+                <input  type="radio" name="gender" value="female" style="width: 13px;"> жіноча
+            </label>    
+        </div>
+        <div class="form-raw">
+            <label for="age">Вік</label>
+            <input type="number" id="age" min="1" max="99" style="width: 30px;" required>
+        </div>
+        <div class="form-raw">
+            <label for="course">Курс</label>
+            <select name="course" id="course" required>
+                <option value="" disabled selected hidden>-=Виберіть курс=-</option>
+                <option value="front-end">Front-End</option>
+                <option value="Back-end">Back-End</option>
+                <option value="UX/UI">UX/UI</option>
+            </select>
+        </div>
+        <div class="form-raw">
+            <label for="address">Повна адреса</label>
+            <textarea name="address" id="address" placeholder="Країна, регіон, місто/селище, вулиця" style="width: 200px; height: 60px;" required></textarea>
+        </div>
+        <div class="form-raw">
+            <input type="checkbox" id="checkbox" style="width: 13px;" required>
+            <label for="checkbox" style="width: 400px;">Я погоджуюсь з обробкою персональних даних</label>
+        </div>
+        <div style="text-align: center;">
+            <input type="reset" value="Очистити форму">
+            <input type="submit" value="Зареєструватися">
+        </div>
+        
+    </form>
+</body>
+</html>

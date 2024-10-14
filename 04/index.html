@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
-        form{
+        form {
             max-width: 430px;
         }
-        .form-raw{
+
+        .form-raw {
             margin-bottom: 10px;
         }
-        .form-raw label{
+
+        .form-raw label {
             display: inline-block;
             width: 200px;
         }
-        .form-raw input{
+
+        .form-raw input {
             display: inline-block;
             width: 200px;
         }
     </style>
 </head>
+
 <body>
-    <form action="#" method="post" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+    <form action="#" method="post" id="my_form"
+        onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
         <div class="form-raw">
             <label for="username">Повне ім`я</label>
             <input type="text" name="username" id="username" required>
@@ -39,14 +45,14 @@
             <label for="repeat-password">Пароль ще раз</label>
             <input type="password" id="repeat-password" required>
         </div>
-        <div class="form-raw" >
+        <div class="form-raw">
             <label>Стать</label>
             <label style="width: 90px;">
                 <input type="radio" name="gender" value="male" checked style="width: 13px;"> чоловіча
             </label>
             <label style="width: 90px;">
-                <input  type="radio" name="gender" value="female" style="width: 13px;"> жіноча
-            </label>    
+                <input type="radio" name="gender" value="female" style="width: 13px;"> жіноча
+            </label>
         </div>
         <div class="form-raw">
             <label for="age">Вік</label>
@@ -63,7 +69,8 @@
         </div>
         <div class="form-raw">
             <label for="address">Повна адреса</label>
-            <textarea name="address" id="address" placeholder="Країна, регіон, місто/селище, вулиця" style="width: 200px; height: 60px;" required></textarea>
+            <textarea name="address" id="address" placeholder="Країна, регіон, місто/селище, вулиця"
+                style="width: 200px; height: 60px;" required></textarea>
         </div>
         <div class="form-raw">
             <input type="checkbox" id="checkbox" style="width: 13px;" required>
@@ -73,7 +80,8 @@
             <input type="reset" value="Очистити форму">
             <input type="submit" value="Зареєструватися">
         </div>
-        
+
     </form>
 </body>
+
 </html>

@@ -122,6 +122,11 @@ nav a:hover{
 
 /*===============TOOLS==================*/
 
+.tools{
+    background: #fff url('../images/tools-bg.svg')center bottom no-repeat;
+    background-size: 100% auto;
+}
+
 .tools h2{
     margin: 0 auto;
     margin-bottom: 50px;

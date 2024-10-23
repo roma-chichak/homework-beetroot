@@ -9,6 +9,10 @@ header{
     margin-bottom: 20px;
 }
 
+:hover{
+    transition: all .1s ease-in;
+}
+
 .container{
     max-width: 800px;
     margin-inline: auto;

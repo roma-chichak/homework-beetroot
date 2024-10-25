@@ -4,19 +4,27 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+}
 
 body{
     font-family:'Lucida Sans Unicode', sans-serif;
     color: #fff;
     font-size: 1.375rem;
     background: #39C;
-    
+    min-height: 100vh;
+    border: 25px solid #2B81AC;
 }
 
 i{
     font-size: 2.625rem;
     vertical-align: middle;
-    margin-left: 15px;
 }
 
 .container{
@@ -24,108 +32,125 @@ i{
     margin-inline: auto;
 }
 
-header{
-    margin: 74px  0 40px;
-}
-
-header .container{
+.title{
+    margin: 74px  0 30px;
     font-size: 1.3125rem;
 }
 
-header .container i{
+.title i{
+    vertical-align: top;
     font-size: 1.6875rem;
-    margin: 0;
+    margin-left: 3px;
 }
 
-.title{
-    margin-bottom: 15px;
+
+.wrapper{
+    background-color: #FFF;
 }
 
-table{
-    width: 100%;
-    border-spacing: 0;
-    background-color: #fff;
-    margin-bottom: 37px;
-   
-}
 
-table, td, tr{
-    border: 1px solid #FFF;
-}
-
-td{
-    
-    display: inline-block;
-    text-align: center;
-    width: 25%;
-}
-
-.content{
-    padding: 26px 0;
-}
-
-.first-block td:first-child{
-    width: 50%;
-}
-
-.first-block td:first-child .content{
+.blue{
     background-color: #3399CC;
 }
 
-.first-block td:nth-child(2) .content{
+.light-blue{
     background-color: #33CCCC;
 }
 
-.first-block td:nth-child(3) .content{
+.violet{
     background-color: #996699;
 }
 
-.second-block td:nth-child(1) .content{
+.red{
     background-color: #C24747;
 }
 
-.second-block td:nth-child(2) .content{
+.orange{
     background-color: #E2674A;
 }
 
-.second-block td:nth-child(3) .content{
+.yellow{
     background-color: #FFCC66;
 }
 
-.second-block td:nth-child(4) .content{
+.light-green{
     background-color: #99CC99;
 }
 
-.third-block td:nth-child(1) .content{
+.grey{
     background-color: #669999;
 }
 
-.third-block td:nth-child(2){
-    width: 50%;
-}
-
-.third-block td:nth-child(2) .content{
+.pink{
     background-color: #CC6699;
 }
 
-.third-block td:nth-child(3) .content{
+.green{
     background-color: #339966;
 }
 
-.fourth-block td{
-    width: 100%;
-}
-
-.fourth-block td .content{
+.dark-grey{
     background-color: #666699;
 }
 
-table:hover .content{
-  opacity: 0.7;
+
+
+.weather__list{
+    font-size: 0;
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 37px;
 }
 
-table .content:hover{
-    opacity: 1;
+.weather__list:hover li{
+    opacity: 0.7;
     cursor: url("../images/cursor.png"), pointer;
+}
+
+.weather__list li:hover{
+    opacity: 1;
     transition: all 0.3s ease;
+}
+
+.weather__list li{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    font-size: 1.375rem;  
+}
+
+.item__content{
+    text-align: center;
+    margin: 2px;
+    padding: 25px 0 33px; 
+}
+
+.item__title{
+    margin-bottom: 9px;
+}
+
+.item__subtitle{
+    max-height: 61px;
+}
+
+.item__content span{
+    margin-left: 13px;
+}
+
+
+
+.weather__list li:first-child{
+    width: 50%;
+}
+
+.weather__list li:nth-child(9){
+    width: 50%;
+}
+
+.weather__list li:nth-child(11){
+    width: 100%;
+}
+
+.footer-text{
+    margin-bottom: 120px;
 }

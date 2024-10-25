@@ -8,91 +8,85 @@
     <title>Weather Fortcast</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            CSS Weather Forecast <i class="wi wi-sunrise"></i>
-        </div> 
-    </header>
     <main>
         <div class="container">
-            <table>
-                <tr class="first-block">
-                    <td>
-                        <div class="content">
-                            <div class="title">Lisbon</div>
-                            <span>21°C<i class="wi wi-day-sunny"></i></span>
+            <div class="title">
+                CSS Weather Forecast <i class="wi wi-sunrise"></i>
+            </div> 
+    
+            <div class="wrapper">
+                <ul class="weather__list">
+                    <li>
+                        <div class="item__content blue">
+                            <div class="item__title">Lisbon</div>
+                            <div class="item__subtitle">21°C<span><i class="wi wi-day-sunny"></i></span></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">Paris</div>
-                            <span>11°C<i class="wi wi-day-sleet"></i></span>
-                       </div>  
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">Belgrade</div>
-                        <span>15°C<i class="wi wi-day-cloudy"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content light-blue">
+                            <div class="item__title">Paris</div>
+                            <div class="item__subtitle">11°C<span><i class="wi wi-night-sleet"></i></span></div>
                         </div>
-                    </td>
-                </tr>
-                <tr class="second-block">
-                    <td>
-                        <div class="content">
-                            <div class="title">Venice</div>
-                            <span>21°C<i class="wi wi-day-cloudy-high"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content violet">
+                            <div class="item__title">Belgrade</div>
+                            <div class="item__subtitle">15°C<span><i class="wi wi-day-cloudy"></i></span></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">Tel-Avive</div>
-                            <span>32°C<i class="wi wi-hot"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content red">
+                            <div class="item__title">Venice</div>
+                            <div class="item__subtitle">21°C<span><i class="wi wi-day-cloudy-high"></i></span></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">Cair</div>
-                            <span>21°C<i class="wi wi-day-sunny"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content orange">
+                            <div class="item__title">Tel-Avive</div>
+                            <div class="item__subtitle">32°C<span><i class="wi wi-hot"></i></span></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">New-York</div>
-                            <span>17°C<i class="wi wi-day-sleet-storm"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content yellow">
+                            <div class="item__title">Cair</div>
+                            <div class="item__subtitle">21°C<span><i class="wi wi-day-sunny"></i></span></div>
                         </div>
-                    </td>
-                </tr>
-                <tr class="third-block">
-                    <td>
-                        <div class="content">
-                            <div class="title">New-Delhi</div>
-                            <span>17°C<i class="wi wi-rain-wind"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content light-green">
+                            <div class="item__title">New-York</div>
+                            <div class="item__subtitle">17°C<span><i class="wi wi-day-sleet-storm"></i></span></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">San-Francisco</div>
-                        <span>15°C<i class="wi wi-day-sunny-overcast"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content grey">
+                            <div class="item__title">New-Delhi</div>
+                            <div class="item__subtitle">17°C<span><i class="wi wi-rain-wind"></i></span></div>
                         </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <div class="title">Tokyo</div>
-                            <span>8°C<i class="wi wi-night-clear"></i></span>
+                    </li>
+                    <li>
+                        <div class="item__content pink">
+                            <div class="item__title">San-Francisco</div>
+                            <div class="item__subtitle">15°C<span><i class="wi wi-day-sunny-overcast"></i></span></div>
                         </div>
-                    </td>
-                </tr>
-                <tr class="fourth-block">
-                    <td>
-                        <div class="content">
-                            <div class="title">Sydney</div>
-                            <span>25°C<i class="wi wi-night-partly-cloudy"></i></span>
-                        </div> 
-                    </td>
-                </tr>
-            </table>
-            <p>Have a nice day and don't forget umbrella if you are in New Delhi now!</p>
+                    </li>
+                    <li>
+                        <div class="item__content green">
+                            <div class="item__title">Tokyo</div>
+                            <div class="item__subtitle">8°C<span><i class="wi wi-night-clear"></i></span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item__content dark-grey">
+                            <div class="item__title">Sydney</div>
+                            <div class="item__subtitle">25°C<span><i class="wi wi-night-partly-cloudy"></i></span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p class="footer-text">Have a nice day and don't forget umbrella if you are in New Delhi now!</p>
         </div>
+        
     </main>
 
 </body>

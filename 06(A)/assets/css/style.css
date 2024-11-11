@@ -15,7 +15,7 @@ a{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
     vertical-align: top;
 }
 
@@ -34,6 +34,66 @@ button{
 h1{
     line-height: 3.375rem; /* 122.727% */
 }
+
+
+
+.page-shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.mobile-panel{
+    position: fixed;
+    transform: translateX(-700px);
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    width: 300px;
+    height: 100vh;
+    padding: 20px;
+    z-index: 1000;
+    transition: all .3s ease;
+}
+
+.open-mobile-menu > .page-shadow{
+    opacity: 1;
+    visibility: visible;
+}
+.open-mobile-menu > .mobile-panel{
+    transform: translateX(0);
+}
+
+.mobile-logo{
+    margin-bottom: 20px;
+}
+
+.mobile-menu li{
+    border-bottom: 1px solid #999;
+    margin-bottom: 30px;
+}
+
+.mobile-menu li a{
+   display: inline-block;
+   width: 100%;
+   padding: 10px 20px;
+   text-decoration: none;
+   color: #666;
+}
+
+
+.hamburger{
+    display: none;
+}
+
+
 
 .container{
     width: min(90%, 1230px);
@@ -69,15 +129,16 @@ h1{
 header{
     padding: 17px 0;
     margin-bottom: 90px;
+    background-color: #fff;
 }
 
-header .container{
+.header-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul{
+.main-menu ul{
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -89,7 +150,7 @@ nav a{
     line-height: 1.75rem;
 }
 
-nav a:hover{
+.menu a:hover{
     color: #FF9900;
 }
 
@@ -229,7 +290,8 @@ footer{
 }
 
 footer .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
 }
 
@@ -274,4 +336,127 @@ input[type='tel']::placeholder{
 
 footer button[type=submit]{
     padding: 14px 31px;
+}
+
+
+@media  screen and (max-width: 1150px) {
+    header{
+        margin-bottom: 45px;
+    }
+
+    .first-section .container{
+        flex-direction: column;
+    }
+    .main-menu, .buttons{
+        display: none;
+    }
+    .hamburger, .mobile-buttons{
+        display: block;
+    }
+
+
+    .tools__list{
+        display: grid;
+        grid-template-columns: repeat(2,  1fr);
+        
+    }
+    .tools__list li{
+      margin: 0 auto;
+    }
+    
+    footer .container{
+        grid-template-columns: repeat(2, 25%);
+        grid-template-rows: 32px 1fr 1fr;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .footer-list{
+        margin: 0 auto;
+    }
+
+    footer .logo{
+        grid-column: span 2;
+        margin: 0 auto;
+    }
+    footer form{
+        grid-column: span 2;
+        margin: 0 auto;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    .first-section{
+        padding-top: 92px;
+    }
+
+    .mobile-wrapper{
+        height: calc(100vh - 92px);
+        overflow-y: auto;
+    }
+
+    .open-mobile-menu > .mobile-panel{
+        transform: translateY(80);
+    }
+
+    .mobile-panel{
+        margin-top: 80px;
+        width: 100%;    
+        transform: translateY(-1100px);
+    }
+
+    .page-shadow{
+        top: 80px;
+        height: calc(100vh - 80px);
+    }
+
+    .mobile-logo{
+        display: none;
+    }
+
+    .mobile-buttons{
+        text-align: center;
+    }
+
+    .mobile-wrapper{
+        padding-bottom: 1px;
+        height: 362px;
+        overflow: scroll;
+    }
+
+
+    .tools__list{
+        grid-template-columns: repeat(1,  1fr);
+    }
+
+    .tools__list li{
+        text-align: center;    
+    }
+
+    .item__icon{
+        margin: 0 auto 30px auto;
+    }
+
+
+    footer .container{
+        grid-template-columns:  100%;
+        grid-template-rows: 32px 1fr 1fr 1fr;
+        gap: 60px;
+    }
+    footer .logo{
+        grid-column: span 1;
+    }
+    footer form{
+        grid-column: span 1;
+    }  
+
+
+    input[type='tel']{
+        width: 240px;
+    }
 }

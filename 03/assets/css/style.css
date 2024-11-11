@@ -42,9 +42,43 @@ body{
     margin-inline: auto;
 }
 
+.mobile-panel{
+    margin-top: 65px;
+    display: none;
+    position: fixed;
+    transform: translateX(700px);
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    z-index: 1000;
+    transition: all .3s ease;
+}
+
+.open-mobile-menu > .mobile-panel{
+    transform: translateX(0);
+}
+
+
+.mobile-menu ul{
+    border-top: 1px solid #999;
+}
+.mobile-menu li{
+    border-bottom: 1px solid #999;
+}
+
+.mobile-menu li a{
+   display: inline-block;
+   width: 100%;
+   padding: 10px 20px;
+   text-decoration: none;
+   color: #666;
+}
 /*===========HEADER============*/
 
-.header .container{
+.header-wrapper{
     border-bottom: 1px solid var(--grey-color);
     padding: 25px 0 24px;
 }
@@ -71,6 +105,44 @@ body{
     color: var(--text-color);
 }
 
+.hamburger{
+    display: none;
+}
+
+.hamb-btn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.hamb-btn::before, .hamb-btn::after{
+    content: '';
+}
+
+.hamb-btn span, .hamb-btn::before, .hamb-btn::after{
+    position: absolute;
+    left: 4px;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.hamb-btn span{
+    top: 8px;
+}
+
+.hamb-btn::before{
+    top: 18px;
+}
+
+.hamb-btn::after{
+    bottom: 8px;
+}
+
 /*===========HEADER============*/
 
 
@@ -81,6 +153,9 @@ body{
 }
 
 img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
     vertical-align: top;
 }
 
@@ -117,12 +192,19 @@ img{
 
 .skills_list {
     margin-top: 50px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 97px;
 }
 
 #last-item figure figcaption{
     margin-bottom: 80px;
+}
+
+.skills_list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills_item{
@@ -247,4 +329,62 @@ img{
     margin-inline: auto;
     font-size: 0.875rem;
     color: var(--grey-color);
+}
+
+
+@media screen and (max-width: 1075px) {
+    .skills_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    header{
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .header-wrapper{
+        border: none;
+        padding: 10px 0 10px;
+    }
+
+    .first-block{
+        margin: 0;
+       padding-top: 80px;
+    }
+
+    .main-menu{
+        display: none;
+    }
+
+    .mobile-panel{
+        display: block;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+  
+}
+
+@media screen and (max-width: 485px) {
+    hgroup{
+        margin-top: 50px;
+    }
+
+    .portfolio .container h2 {
+        padding-top: 50px;
+    }
+
+    .skills_list {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts_text{
+        margin-bottom: 50px;
+    }
 }

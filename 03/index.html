@@ -10,17 +10,36 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+
+    <div class="mobile-panel">
+        <nav class="mobile-menu menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="container">
-            <nav class="main-menu menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about-me">About me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
+            <div class="header-wrapper">
+                <nav class="main-menu menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <button type="button" class="hamb-btn" onclick="document.body.classList.toggle('open-mobile-menu')"><span></span></button>
+                </div>
+            </div>         
         </div>
     </header>
 

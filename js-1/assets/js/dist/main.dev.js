@@ -14,9 +14,9 @@ let qwerty-qwert
 var userName = prompt("Enter your name");
 alert("Hello, ".concat(userName, "!"));
 var currentYear = 2024;
-var age = prompt("Enter your age");
-var birthYear = currentYear - age;
-alert("You birthed in ".concat(birthYear));
+var birthYear = prompt("Enter your birth year");
+var age = currentYear - birthYear;
+alert("You age is ".concat(age));
 var dovszyna = prompt("Вкажіть довжину сторони квадрата");
 var per = dovszyna * 4;
 alert("\u041F\u0435\u0440\u0438\u043C\u0435\u0442\u0440 \u043A\u0432\u0430\u0434\u0440\u0430\u0442\u0430 - ".concat(per, " \u0441\u043C"));

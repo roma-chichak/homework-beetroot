@@ -16,10 +16,9 @@ alert(`Hello, ${userName}!`)
 
 
 const currentYear = 2024
-const age = prompt("Enter your age")
-
-const birthYear = currentYear - age
-alert(`You birthed in ${birthYear}`)
+const birthYear = prompt("Enter your birth year")
+const age = currentYear - birthYear
+alert(`You age is ${age}`)
 
 
 const dovszyna = prompt("Вкажіть довжину сторони квадрата")

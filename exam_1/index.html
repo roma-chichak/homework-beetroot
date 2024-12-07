@@ -7,11 +7,40 @@
   <title>Bhromaon</title>
   <link rel="stylesheet" href="assets/css/_fonts.min.css">
   <link rel="stylesheet" href="assets/css/icons.css">
+  <link rel="stylesheet" href="assets/css/hamburgers.min.css">
   <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
 <body>
+  <div class="mobile-panel">
+    <div class="mobile-wrapper">
+      <div class="nav-logo logo">
+        <a href="#">Bhromaon</a>
+      </div>
+      <button class="hamburger hamburger--spin" type="button" onclick="toggleMenu()">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+    <div class="nav-menu">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a href="#">Who We Are</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">What We Do</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Travel With Us</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="page-wrapper">
     <header>
       <section class="first-page">
@@ -51,6 +80,11 @@
             </li>
           </ul>
         </div>
+        <button class="hamburger hamburger--spin" type="button" onclick="toggleMenu()">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
     </div>
     <main>
@@ -192,6 +226,11 @@
       animateClass: 'animate__animated'
      });
      wow.init();
+
+     function toggleMenu(){
+            document.querySelector(".hamburger").classList.toggle('is-active')
+            document.body.classList.toggle('open-mobile-menu');
+      }
   </script>
 </body>
 

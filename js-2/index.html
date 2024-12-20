@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container pt-4 pb-4">
+    <div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 1</div>
+      <div class="card-body">
+        <p class="card-text">Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.</p>
+        <button type="button" class="btn btn-primary" onclick="task1()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask1"></span>
+      </div>
+    </div>
+    <div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 2</div>
+      <div class="card-body">
+        <p class="card-text">Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.</p>
+        <button type="button" class="btn btn-primary" onclick="task2()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask2"></span>
+      </div>
+    </div>
+    <div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 3</div>
+      <div class="card-body">
+        <p class="card-text">Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.</p>
+        <div class="mb-3">
+          <label for="fleshAmount" class="form-label">Обсяг вашої флешки в Гб</label>
+          <input type="number" class="form-control" id="fleshAmount">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="task3()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask3"></span>
+      </div>
+    </div><div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 4</div>
+      <div class="card-body">
+        <p class="card-text">Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.</p>
+        <div class="mb-3">
+          <label for="sumWallet" class="form-label">Сума грошей в гаманці</label>
+          <input type="number" class="form-control" id="sumWallet">
+        </div>
+        <div class="mb-3">
+          <label for="chocolatePrice" class="form-label">Ціна однієї шоколадки</label>
+          <input type="number" class="form-control" id="chocolatePrice">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="task4()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask4"></span>
+      </div>
+    </div>
+    <div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 5</div>
+      <div class="card-body">
+        <p class="card-text">Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).</p>
+        <div class="mb-3">
+          <label for="myNumber" class="form-label">Ваше число</label>
+          <input type="number" class="form-control" id="myNumber">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="task5()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask5"></span>
+      </div>
+    </div>
+    <div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 6</div>
+      <div class="card-body">
+        <p class="card-text">Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.</p>
+        <div class="mb-3">
+          <label for="myVklad" class="form-label">Ваша сума вкладу в банк</label>
+          <input type="number" class="form-control" id="myVklad">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="task6()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask6"></span>
+      </div>
+    </div>
+    <div class="card mb-3" style="width: 40%; margin: 0 auto;">
+      <div class="card-header">Task 7</div>
+      <div class="card-body">
+        <p class="card-text">Що повернуть вирази: 
+        <br>2 && 0 && 3 <br>
+        2 || 0 || 3 <br> 
+        2 && 0 || 3</p>
+        <button type="button" class="btn btn-primary" onclick="task7()">Run</button>
+      </div>
+      <div class="card-footer">
+        Result: <span id="startTask7"></span>
+      </div>
+    </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
